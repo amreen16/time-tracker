@@ -27,13 +27,6 @@ pipeline {
                 sh 'mvn test'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                sh 'echo "Deploying application..."'
-                // Add your deployment steps here
-            }
-        }
     }
 
     post {
