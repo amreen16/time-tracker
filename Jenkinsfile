@@ -12,19 +12,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/amreen16/time-tracker.git', branch: 'master'
+                git url: 'https://github.com/amreen16/time-tracker.git', branch: 'main'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                bat 'mvn clean package'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
